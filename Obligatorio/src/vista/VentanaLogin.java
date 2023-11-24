@@ -21,8 +21,8 @@ public class VentanaLogin extends JFrame {
     private static final long serialVersionUID = 1L;
 
     private final JPanel panelLogin = new JPanel();
-    private JTextField txtUsuario;
-    private JPasswordField txtContraseña;
+    private JTextField txtUsuarioLogin;
+    private JPasswordField txtContraseñaLogin;
 
     public VentanaLogin() {
         setTitle("Inicio");
@@ -51,24 +51,24 @@ public class VentanaLogin extends JFrame {
         labelBienvenida.setHorizontalAlignment(SwingConstants.CENTER);
 
         // Campos de usuario y contraseña
-        txtContraseña = new JPasswordField();
-        txtContraseña.setBounds(51, 280, 273, 30);
-        panelCosas.add(txtContraseña);
+        txtContraseñaLogin = new JPasswordField();
+        txtContraseñaLogin.setBounds(51, 280, 273, 30);
+        panelCosas.add(txtContraseñaLogin);
 
-        txtUsuario = new JTextField();
-        txtUsuario.setBounds(51, 180, 271, 30);
-        panelCosas.add(txtUsuario);
-        txtUsuario.setColumns(10);
+        txtUsuarioLogin = new JTextField();
+        txtUsuarioLogin.setBounds(51, 180, 271, 30);
+        panelCosas.add(txtUsuarioLogin);
+        txtUsuarioLogin.setColumns(10);
 
         // Etiquetas de usuario y contraseña
         JLabel labelContraseña = new JLabel("Ingrese su contraseña");
-        labelContraseña.setBounds(89, 239, 163, 30);
+        labelContraseña.setBounds(103, 239, 163, 30);
         panelCosas.add(labelContraseña);
         labelContraseña.setHorizontalAlignment(SwingConstants.CENTER);
 
         JLabel labelUsuario = new JLabel("Ingrese su usuario");
         labelUsuario.setBackground(new Color(255, 255, 255));
-        labelUsuario.setBounds(89, 127, 163, 30);
+        labelUsuario.setBounds(103, 129, 163, 30);
         panelCosas.add(labelUsuario);
         labelUsuario.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -78,7 +78,7 @@ public class VentanaLogin extends JFrame {
         panelCosas.add(btnSiguienteLogin);
 
         // Configuración del fondo
-        JLabel background_1 = new JLabel(new ImageIcon("C:\\Users\\mujic\\eclipse-workspace\\Obligatorio\\imagenesProyecto\\bmo.jpg"));
+        JLabel background_1 = new JLabel(new ImageIcon(VentanaLogin.class.getResource("/Images/bmo.jpg")));
         background_1.setBounds(0, -34, 566, 606);
         panelLogin.add(background_1);
 
